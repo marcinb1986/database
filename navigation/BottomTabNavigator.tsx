@@ -21,11 +21,11 @@ export default function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="SearchScreen"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}
     >
       <BottomTab.Screen
-        name="TabOne"
+        name="SearchScreen"
         component={TabOneNavigator}
         options={{
           tabBarIcon: ({ color }) => (
@@ -34,7 +34,7 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
+        name="DetailsScreen"
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => (
@@ -63,9 +63,9 @@ function TabOneNavigator() {
   return (
     <TabOneStack.Navigator>
       <TabOneStack.Screen
-        name="TabOneScreen"
+        name="SearchScreen"
         component={TabOneScreen}
-        options={{ headerTitle: "Tab One Title" }}
+        options={{ headerTitle: "Search Screen" }}
       />
     </TabOneStack.Navigator>
   );
@@ -77,9 +77,9 @@ function TabTwoNavigator() {
   return (
     <TabTwoStack.Navigator>
       <TabTwoStack.Screen
-        name="TabTwoScreen"
+        name="DetailsScreen"
         component={TabTwoScreen}
-        options={{ headerTitle: "Tab Two Title" }}
+        options={{ headerTitle: "Details Screen" }}
       />
     </TabTwoStack.Navigator>
   );
