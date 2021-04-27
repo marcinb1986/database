@@ -7,11 +7,11 @@ import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
-
+import { FC } from "react";
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
-import TabOneScreen from "../screens/search-screen/TabOneScreen";
-import TabTwoScreen from "../screens/details-screen/TabTwoScreen";
+import { TabOneScreen } from "../screens/search-screen/TabOneScreen";
+import { TabTwoScreen } from "../screens/details-screen/TabTwoScreen";
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from "../types";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
