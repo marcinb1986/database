@@ -4,4 +4,5 @@ export const colors = {
   informationBgc: "#ecfadc",
   borderline: "#0a0a0a",
   alert: "#fc0000",
+  inputBgcColor: "#ffffff",
 };

@@ -1,9 +1,9 @@
 import { StackNavigationProp } from "@react-navigation/stack";
 import * as React from "react";
 import { FC } from "react";
-import { Text } from "react-native";
 import { StyledContainer } from "../../styles/styles";
 import { TabOneParamList } from "../../types";
+import { SearchField } from "../../components/SearchField";
 
 interface IProps {
   navigation: StackNavigationProp<TabOneParamList, "SearchScreen">;
@@ -11,7 +11,7 @@ interface IProps {
 export const TabOneScreen: FC<IProps> = ({ navigation }) => {
   return (
     <StyledContainer>
-      <Text>Działa</Text>
+      <SearchField />
     </StyledContainer>
   );
 };
