@@ -5,10 +5,10 @@ import { colors } from "../../styles/variables";
 export const StyledTextInput = styled(TextInput)`
   height: 40px;
   width: 80%;
-  background: ${colors.inputBgcColor};
+  background: ${colors.whiteColor};
   border: ${colors.borderline};
-  margin-top: 50px;
   border-radius: 10px;
+  margin-top: 100px;
 `;
 
 export const TextInputWrapper = styled(TouchableOpacity)`
@@ -16,6 +16,5 @@ export const TextInputWrapper = styled(TouchableOpacity)`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 100%;
   width: 100%;
 `;
