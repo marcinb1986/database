@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 import { colors } from "../../styles/variables";
 
 export const StyledTextInput = styled(TextInput)`
-  height: 40px;
+  height: 5vh;
   width: 80%;
   background: ${colors.whiteColor};
   border: ${colors.borderline};

@@ -1,6 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 import { StyledDetailsField } from "../DetailsField/styles";
+import { colors } from "../../styles/variables";
 
-export const DetailsField = () => {
-  return <StyledDetailsField />;
+export interface SearchFieldProps {
+  color: string;
+}
+
+export const DetailsField: FC<SearchFieldProps> = ({ color }) => {
+  return <StyledDetailsField {...{ color }} />;
 };

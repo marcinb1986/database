@@ -5,8 +5,9 @@ import { colors } from "../../styles/variables";
 export const ButtonWrapper = styled(TouchableOpacity)`
   background: ${(props: { color: string }) => props.color};
   border-radius: 10px;
-  height: 100px;
-  width: 60%;
+  height: 40px;
+  width: 40%;
+  margin-top: 5vh;
 `;
 
 export const StyledButton = styled(Button)`
