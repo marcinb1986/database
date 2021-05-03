@@ -16,13 +16,13 @@ export const TabOneScreen: FC<IProps> = ({ navigation }) => {
     <StyledContainer>
       <SearchField />
       <Button
-        fontColor={colors.darkFontColor}
+        fontColor={colors.lightFontColor}
         fontWeigth={600}
-        color={colors.buttonBackground}
-        children={"Show more"}
-        onPress={() => {}}
+        backgroundColor={colors.buttonBackground}
+        title="Show more"
+        onPress={() => navigation.goBack()}
       />
-      <DetailsField color={colors.whiteColor} />
+      <DetailsField backgroundColor={colors.whiteColor} />
     </StyledContainer>
   );
 };
