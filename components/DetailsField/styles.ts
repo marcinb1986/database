@@ -3,7 +3,7 @@ import { View } from "react-native";
 import { colors } from "../../styles/variables";
 
 export const StyledDetailsField = styled(View)`
-  background: ${(props: { color: string }) => props.color};
+  background: ${(props: { backgroundColor: string }) => props.backgroundColor};
   width: 80%;
   height: 50vh;
   border-radius: 10px;

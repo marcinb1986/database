@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { GestureResponderEvent } from "react-native";
+import { GestureResponderEvent, TextComponent } from "react-native";
 import { ButtonWrapper, StyledButton } from "../Button/styles";
 
 export interface ButtonProps {
