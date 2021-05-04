@@ -19,7 +19,9 @@ export const TabTwoScreen: FC<IProps> = ({ navigation }) => {
         fontWeigth={600}
         backgroundColor={colors.buttonBackground}
         title="Go back"
-        onPress={() => {}}
+        onPress={() => {
+          navigation.goBack;
+        }}
       />
     </StyledContainer>
   );

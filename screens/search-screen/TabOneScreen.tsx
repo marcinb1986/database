@@ -2,14 +2,15 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import * as React from "react";
 import { FC } from "react";
 import { StyledContainer } from "../../styles/styles";
-import { TabOneParamList } from "../../types";
+import { BottomTabParamList, TabOneParamList } from "../../types";
 import { SearchField } from "../../components/SearchField";
 import { Button } from "../../components/Button";
 import { DetailsField } from "../../components/DetailsField";
 import { colors } from "../../styles/variables";
+import { TabTwoParamList } from "../../types";
 
 interface IProps {
-  navigation: StackNavigationProp<TabOneParamList, "SearchScreen">;
+  navigation: StackNavigationProp<BottomTabParamList, "DetailsScreen">;
 }
 export const TabOneScreen: FC<IProps> = ({ navigation }) => {
   return (
@@ -20,7 +21,9 @@ export const TabOneScreen: FC<IProps> = ({ navigation }) => {
         fontWeigth={600}
         backgroundColor={colors.buttonBackground}
         title="Show more"
-        onPress={() => navigation.goBack()}
+        onPress={() => {
+          navigation.navigate("DetailsScreen");
+        }}
       />
       <DetailsField backgroundColor={colors.whiteColor} />
     </StyledContainer>
