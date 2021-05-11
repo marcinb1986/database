@@ -3,21 +3,20 @@ import * as React from "react";
 import { FC } from "react";
 import { DetailsField } from "../../components/DetailsField";
 import { StyledContainer } from "../../styles/styles";
-import { TabTwoParamList } from "../../types";
 import { colors } from "../../styles/variables";
 import { Button } from "../../components/Button";
+import { BottomTabParamList } from "../../types";
 
 interface IProps {
-  navigation: StackNavigationProp<TabTwoParamList, "DetailsScreen">;
+  navigation: StackNavigationProp<BottomTabParamList, "DetailsScreen">;
 }
 export const TabTwoScreen: FC<IProps> = ({ navigation }) => {
   return (
     <StyledContainer>
       <DetailsField backgroundColor={colors.whiteColor} />
       <Button
-        fontColor={colors.lightFontColor}
-        fontWeigth={600}
-        backgroundColor={colors.buttonBackground}
+        fontColor={colors.darkFontColor}
+        backgroundColor={colors.alert}
         title="Go back"
         onPress={() => {
           navigation.goBack;
