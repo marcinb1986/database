@@ -15,6 +15,7 @@ export const TabOneScreen: FC<IProps> = ({ navigation }) => {
   return (
     <StyledContainer>
       <SearchField />
+      <DetailsField backgroundColor={colors.whiteColor} />
       <Button
         color={colors.buttonBackground}
         title="Show more"
@@ -22,7 +23,6 @@ export const TabOneScreen: FC<IProps> = ({ navigation }) => {
           navigation.navigate("DetailsScreen");
         }}
       />
-      <DetailsField backgroundColor={colors.whiteColor} />
     </StyledContainer>
   );
 };

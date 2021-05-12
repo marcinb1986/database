@@ -1,6 +1,6 @@
 import { TextInput, TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
-import { colors } from "../../styles/variables";
+import { colors, margins } from "../../styles/variables";
 
 export const StyledTextInput = styled(TextInput)`
   height: 5vh;
@@ -8,7 +8,7 @@ export const StyledTextInput = styled(TextInput)`
   background: ${colors.whiteColor};
   border: ${colors.borderline};
   border-radius: 10px;
-  margin-top: 50px;
+  margin-top: ${margins.marginTopTextInput};
 `;
 
 export const TextInputWrapper = styled(TouchableOpacity)`

@@ -8,3 +8,7 @@ export const colors = {
   darkFontColor: "#4f4f4d",
   lightFontColor: "#fcebeb",
 };
+
+export const margins = {
+  marginTop: "5vh",
+};
