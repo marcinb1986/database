@@ -3,21 +3,15 @@ import { GestureResponderEvent, TextComponent } from "react-native";
 import { ButtonWrapper, StyledButton } from "../Button/styles";
 
 export interface ButtonProps {
-  backgroundColor: string;
+  color: string;
   title: string;
-  fontColor: string;
   onPress: (event: GestureResponderEvent) => void;
 }
 
-export const Button: FC<ButtonProps> = ({
-  backgroundColor,
-  title,
-  fontColor,
-  onPress,
-}) => {
+export const Button: FC<ButtonProps> = ({ color, title, onPress }) => {
   return (
-    <ButtonWrapper {...{ onPress, fontColor }}>
-      <StyledButton {...{ title, backgroundColor }} />
+    <ButtonWrapper>
+      <StyledButton {...{ title, onPress, color }} />
     </ButtonWrapper>
   );
 };

@@ -15,8 +15,7 @@ export const TabTwoScreen: FC<IProps> = ({ navigation }) => {
     <StyledContainer>
       <DetailsField backgroundColor={colors.whiteColor} />
       <Button
-        fontColor={colors.darkFontColor}
-        backgroundColor={colors.alert}
+        color={colors.buttonBackground}
         title="Go back"
         onPress={() => {
           navigation.goBack;

@@ -16,8 +16,7 @@ export const TabOneScreen: FC<IProps> = ({ navigation }) => {
     <StyledContainer>
       <SearchField />
       <Button
-        fontColor={colors.lightFontColor}
-        backgroundColor={colors.buttonBackground}
+        color={colors.buttonBackground}
         title="Show more"
         onPress={() => {
           navigation.navigate("DetailsScreen");

@@ -8,7 +8,7 @@ export const StyledTextInput = styled(TextInput)`
   background: ${colors.whiteColor};
   border: ${colors.borderline};
   border-radius: 10px;
-  margin-top: 100px;
+  margin-top: 50px;
 `;
 
 export const TextInputWrapper = styled(TouchableOpacity)`
