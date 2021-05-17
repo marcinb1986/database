@@ -1,6 +1,6 @@
 import { StackNavigationProp } from "@react-navigation/stack";
 import * as React from "react";
-import { FC } from "react";
+import { FC, useEffect, useContext } from "react";
 import { StyledContainer } from "../../styles/styles";
 import { BottomTabParamList } from "../../types";
 import { SearchField } from "../../components/SearchField";
@@ -12,6 +12,8 @@ interface IProps {
   navigation: StackNavigationProp<BottomTabParamList, "SearchScreen">;
 }
 export const TabOneScreen: FC<IProps> = ({ navigation }) => {
+  useEffect(() => {});
+
   return (
     <StyledContainer>
       <SearchField />

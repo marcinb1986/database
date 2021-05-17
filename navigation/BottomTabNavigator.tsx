@@ -13,6 +13,7 @@ import useColorScheme from "../hooks/useColorScheme";
 import { TabOneScreen } from "../screens/search-screen/TabOneScreen";
 import { TabTwoScreen } from "../screens/details-screen/TabTwoScreen";
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from "../types";
+import { ApiContextProvider } from "../context/api-context";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -61,6 +62,7 @@ const TabOneStack = createStackNavigator<TabOneParamList>();
 
 function TabOneNavigator() {
   return (
+    // <ApiContextProvider>
     <TabOneStack.Navigator>
       <TabOneStack.Screen
         name="SearchScreen"
@@ -68,6 +70,7 @@ function TabOneNavigator() {
         options={{ headerTitle: "Search Screen" }}
       />
     </TabOneStack.Navigator>
+    // </ApiContextProvider>
   );
 }
 
@@ -75,6 +78,7 @@ const TabTwoStack = createStackNavigator<TabTwoParamList>();
 
 function TabTwoNavigator() {
   return (
+    // <ApiContextProvider>
     <TabTwoStack.Navigator>
       <TabTwoStack.Screen
         name="DetailsScreen"
@@ -82,5 +86,6 @@ function TabTwoNavigator() {
         options={{ headerTitle: "Details Screen" }}
       />
     </TabTwoStack.Navigator>
+    // </ApiContextProvider>
   );
 }
