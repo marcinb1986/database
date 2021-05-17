@@ -13,7 +13,6 @@ import useColorScheme from "../hooks/useColorScheme";
 import { TabOneScreen } from "../screens/search-screen/TabOneScreen";
 import { TabTwoScreen } from "../screens/details-screen/TabTwoScreen";
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from "../types";
-import { ApiContextProvider } from "../context/api-context";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
