@@ -18,7 +18,7 @@ export const TabTwoScreen: FC<IProps> = ({ navigation }) => {
         color={colors.buttonBackground}
         title="Go back"
         onPress={() => {
-          navigation.goBack;
+          navigation.navigate("SearchScreen");
         }}
       />
     </StyledContainer>

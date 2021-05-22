@@ -5,7 +5,7 @@ import { margins } from "../../styles/variables";
 export const ButtonWrapper = styled(TouchableOpacity)`
   height: 40px;
   width: 40%;
-  margin-top: ${margins.marginTop};
+  margin-top: ${margins.margin};
 `;
 
 export const StyledButton = styled(Button)`

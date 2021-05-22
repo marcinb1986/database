@@ -10,5 +10,5 @@ export const colors = {
 };
 
 export const margins = {
-  marginTop: "5vh",
+  margin: "3vh",
 };
