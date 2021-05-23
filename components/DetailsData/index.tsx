@@ -2,12 +2,12 @@ import React, { FC } from "react";
 import { StyledDetailsWrapper, StyledDetail } from "./styles";
 
 interface DetailsProps {
-  color?: string;
+  selectionColor?: string | undefined;
 }
-export const DetailsData: FC<DetailsProps> = ({ children, color }) => {
+export const DetailsData: FC<DetailsProps> = ({ children, selectionColor }) => {
   return (
-    <StyledDetailsWrapper {...{ color }}>
-      <StyledDetail>{children}</StyledDetail>
+    <StyledDetailsWrapper>
+      <StyledDetail selectionColor={selectionColor}>{children}</StyledDetail>
     </StyledDetailsWrapper>
   );
 };

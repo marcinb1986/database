@@ -51,10 +51,9 @@ export const TabOneScreen: FC<IProps> = ({ navigation }) => {
         }}
       />
       <DetailsField backgroundColor={colors.whiteColor}>
-        <DetailsData>
-          {userData && userData.id}
-          {userData && userData.location}
-          {userData && userData.created_at}
+        <DetailsData selectionColor={"red"}>
+          {userData &&
+            `${userData.id}, ${userData.location}, ${userData.created_at}`}
         </DetailsData>
       </DetailsField>
       {userData && userData.id}
