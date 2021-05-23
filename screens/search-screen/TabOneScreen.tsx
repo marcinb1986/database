@@ -59,7 +59,7 @@ export const TabOneScreen: FC<IProps> = ({ navigation }) => {
       {userData && userData.id}
       <Button
         color={colors.buttonBackground}
-        title="Show more"
+        title="Show more!"
         onPress={() => {
           navigation.navigate("DetailsScreen");
         }}

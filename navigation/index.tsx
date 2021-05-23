@@ -14,6 +14,7 @@ import { ColorSchemeName } from "react-native";
 import { ApiContext } from "../context/api-context";
 
 import NotFoundScreen from "../screens/NotFoundScreen";
+import { TabOneScreen } from "../screens/search-screen/TabOneScreen";
 import { RootStackParamList } from "../types";
 import BottomTabNavigator from "./BottomTabNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
@@ -40,7 +41,7 @@ const Stack = createStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
+      <Stack.Screen name="Root" component={TabOneScreen} />
       <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}
