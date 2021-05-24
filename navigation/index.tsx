@@ -12,11 +12,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
 import { ColorSchemeName } from "react-native";
 import { ApiContext } from "../context/api-context";
-
 import NotFoundScreen from "../screens/NotFoundScreen";
 import { TabOneScreen } from "../screens/search-screen/TabOneScreen";
 import { RootStackParamList } from "../types";
-import BottomTabNavigator from "./BottomTabNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
 
 export default function Navigation({
