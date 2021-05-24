@@ -7,7 +7,6 @@ import { SearchField } from "../../components/SearchField";
 import { Button } from "../../components/Button";
 import { DetailsField } from "../../components/DetailsField";
 import { colors } from "../../styles/variables";
-import { DetailsData } from "../../components/DetailsData";
 import { Loading } from "../../components/Loading";
 
 interface IProps {
@@ -51,10 +50,12 @@ export const TabOneScreen: FC<IProps> = ({ navigation }) => {
         }}
       />
       <DetailsField backgroundColor={colors.whiteColor}>
-        <DetailsData selectionColor={"red"}>
-          {userData &&
-            `${userData.id}, ${userData.location}, ${userData.created_at}`}
-        </DetailsData>
+        {`id : ${userData ? userData.id : " "}`}
+        <hr />
+        {`location : ${userData ? userData.location : " "}`}
+        <hr />
+        {`GitHub user from : ${userData ? userData.created_at : " "}`}
+        <hr />
       </DetailsField>
       {userData && userData.id}
       <Button
