@@ -13,7 +13,7 @@ interface IProps {
 export const TabTwoScreen: FC<IProps> = ({ navigation }) => {
   return (
     <StyledContainer>
-      <DetailsField backgroundColor={colors.whiteColor} />
+      <DetailsField backgroundColor={colors.whiteColor}></DetailsField>
       <Button
         color={colors.buttonBackground}
         title="Go back"
