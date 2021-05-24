@@ -7,11 +7,11 @@ import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
-
+import { FC } from "react";
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
-import TabOneScreen from "../screens/main-screen/TabOneScreen";
-import TabTwoScreen from "../screens/details-screen/TabTwoScreen";
+import { TabOneScreen } from "../screens/search-screen/TabOneScreen";
+import { TabTwoScreen } from "../screens/details-screen/TabTwoScreen";
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from "../types";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
@@ -21,11 +21,11 @@ export default function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="SearchScreen"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}
     >
       <BottomTab.Screen
-        name="TabOne"
+        name="SearchScreen"
         component={TabOneNavigator}
         options={{
           tabBarIcon: ({ color }) => (
@@ -34,7 +34,7 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
+        name="DetailsScreen"
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => (
@@ -61,13 +61,15 @@ const TabOneStack = createStackNavigator<TabOneParamList>();
 
 function TabOneNavigator() {
   return (
+    // <ApiContextProvider>
     <TabOneStack.Navigator>
       <TabOneStack.Screen
-        name="TabOneScreen"
+        name="SearchScreen"
         component={TabOneScreen}
-        options={{ headerTitle: "Tab One Title" }}
+        options={{ headerTitle: "Search Screen" }}
       />
     </TabOneStack.Navigator>
+    // </ApiContextProvider>
   );
 }
 
@@ -75,12 +77,14 @@ const TabTwoStack = createStackNavigator<TabTwoParamList>();
 
 function TabTwoNavigator() {
   return (
+    // <ApiContextProvider>
     <TabTwoStack.Navigator>
       <TabTwoStack.Screen
-        name="TabTwoScreen"
+        name="DetailsScreen"
         component={TabTwoScreen}
-        options={{ headerTitle: "Tab Two Title" }}
+        options={{ headerTitle: "Details Screen" }}
       />
     </TabTwoStack.Navigator>
+    // </ApiContextProvider>
   );
 }
