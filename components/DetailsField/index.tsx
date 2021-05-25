@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { StyledDetailsField, StyledDetail } from "../DetailsField/styles";
+import { StyledDetailsField, DetailsFieldChild } from "../DetailsField/styles";
 
 export interface SearchFieldProps {
   backgroundColor: string;
@@ -12,8 +12,7 @@ export const DetailsField: FC<SearchFieldProps> = ({
 }) => {
   return (
     <StyledDetailsField {...{ backgroundColor }}>
-      {/* <StyledDetail>{children}</StyledDetail> */}
-      {children}
+      <DetailsFieldChild>{children}</DetailsFieldChild>
     </StyledDetailsField>
   );
 };

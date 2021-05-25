@@ -8,6 +8,7 @@ import { Button } from "../../components/Button";
 import { DetailsField } from "../../components/DetailsField";
 import { colors } from "../../styles/variables";
 import { Loading } from "../../components/Loading";
+import { DetailsFieldChild } from "../../components/DetailsField/styles";
 
 interface IProps {
   navigation: StackNavigationProp<BottomTabParamList, "SearchScreen">;
@@ -50,12 +51,25 @@ export const TabOneScreen: FC<IProps> = ({ navigation }) => {
         }}
       />
       <DetailsField backgroundColor={colors.whiteColor}>
-        {`id : ${userData ? userData.id : " "}`}
+        <DetailsFieldChild>
+          {`id : ${userData?.id ? userData.id : ""}`}
+        </DetailsFieldChild>
         <hr />
-        {`location : ${userData ? userData.location : " "}`}
+        <DetailsFieldChild>
+          {`Location : ${userData?.location ? userData.location : ""}`}
+        </DetailsFieldChild>
         <hr />
-        {`GitHub user from : ${userData ? userData.created_at : " "}`}
-        <hr />
+        <DetailsFieldChild>
+          {`GitHub user from :${"\n"} ${
+            userData?.created_at ? userData.created_at : ""
+          }`}
+        </DetailsFieldChild>
+
+        {/* {`id : ${userData?.id ? userData.id : ""}`}
+        {`location : ${userData?.location ? userData.location : ""}`}
+        {`GitHub user from : ${
+          userData?.created_at ? userData.created_at : ""
+        }`} */}
       </DetailsField>
       {userData && userData.id}
       <Button
