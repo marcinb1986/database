@@ -13,7 +13,13 @@ export const StyledDetailsField = styled(View)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: space-around;
 `;
 
-export const StyledDetail = styled(Text)``;
+export const DetailsFieldChild = styled(Text)`
+  /* background-color: red; */
+  margin: ${margins.margin};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+`;
