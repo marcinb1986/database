@@ -7,7 +7,6 @@ import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
-import { FC } from "react";
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
 import { TabOneScreen } from "../screens/search-screen/TabOneScreen";
@@ -61,7 +60,6 @@ const TabOneStack = createStackNavigator<TabOneParamList>();
 
 function TabOneNavigator() {
   return (
-    // <ApiContextProvider>
     <TabOneStack.Navigator>
       <TabOneStack.Screen
         name="SearchScreen"
@@ -69,7 +67,6 @@ function TabOneNavigator() {
         options={{ headerTitle: "Search Screen" }}
       />
     </TabOneStack.Navigator>
-    // </ApiContextProvider>
   );
 }
 
@@ -77,7 +74,6 @@ const TabTwoStack = createStackNavigator<TabTwoParamList>();
 
 function TabTwoNavigator() {
   return (
-    // <ApiContextProvider>
     <TabTwoStack.Navigator>
       <TabTwoStack.Screen
         name="DetailsScreen"
@@ -85,6 +81,5 @@ function TabTwoNavigator() {
         options={{ headerTitle: "Details Screen" }}
       />
     </TabTwoStack.Navigator>
-    // </ApiContextProvider>
   );
 }
