@@ -37,8 +37,6 @@ export const TabOneScreen: FC<IProps> = ({ navigation }) => {
     };
   }, [userName]);
 
-  console.log(userData?.id);
-
   return (
     <StyledContainer>
       <SearchField value={userName} onChangeText={handleUserName} />
@@ -64,12 +62,6 @@ export const TabOneScreen: FC<IProps> = ({ navigation }) => {
             userData?.created_at ? userData.created_at : ""
           }`}
         </DetailsFieldChild>
-
-        {/* {`id : ${userData?.id ? userData.id : ""}`}
-        {`location : ${userData?.location ? userData.location : ""}`}
-        {`GitHub user from : ${
-          userData?.created_at ? userData.created_at : ""
-        }`} */}
       </DetailsField>
       {userData && userData.id}
       <Button
