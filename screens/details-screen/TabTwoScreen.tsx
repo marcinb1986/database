@@ -5,20 +5,23 @@ import { DetailsField } from "../../components/DetailsField";
 import { StyledContainer } from "../../styles/styles";
 import { colors } from "../../styles/variables";
 import { Button } from "../../components/Button";
-import { BottomTabParamList } from "../../types";
+import { BottomTabParamList, RootStackParamList } from "../../types";
+import { DetailsFieldChild } from "../../components/DetailsField/styles";
 
 interface IProps {
-  navigation: StackNavigationProp<BottomTabParamList, "DetailsScreen">;
+  navigation: StackNavigationProp<RootStackParamList, "DetailsScreen">;
 }
 export const TabTwoScreen: FC<IProps> = ({ navigation }) => {
   return (
     <StyledContainer>
-      <DetailsField backgroundColor={colors.whiteColor}></DetailsField>
+      <DetailsField backgroundColor={colors.whiteColor}>
+        <DetailsFieldChild>Działa</DetailsFieldChild>
+      </DetailsField>
       <Button
         color={colors.buttonBackground}
         title="Go back"
         onPress={() => {
-          navigation.navigate("SearchScreen");
+          navigation.navigate("Root");
         }}
       />
     </StyledContainer>

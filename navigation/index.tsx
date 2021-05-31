@@ -11,6 +11,7 @@ import {
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
 import { ColorSchemeName } from "react-native";
+import { TabTwoScreen } from "../screens/details-screen/TabTwoScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
 import { TabOneScreen } from "../screens/search-screen/TabOneScreen";
 import { RootStackParamList } from "../types";
@@ -39,6 +40,7 @@ function RootNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Root" component={TabOneScreen} />
+      <Stack.Screen name="DetailsScreen" component={TabTwoScreen} />
       <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}
