@@ -11,11 +11,12 @@ import {
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
 import { ColorSchemeName } from "react-native";
-import { TabTwoScreen } from "../screens/details-screen/TabTwoScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
 import { TabOneScreen } from "../screens/search-screen/TabOneScreen";
 import { RootStackParamList } from "../types";
+import BottomTabNavigator from "./BottomTabNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
+import { ApiContextProvider } from "../context/api-context";
 
 export default function Navigation({
   colorScheme,
@@ -27,7 +28,9 @@ export default function Navigation({
       linking={LinkingConfiguration}
       theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
     >
-      <RootNavigator />
+      <ApiContextProvider>
+        <RootNavigator />
+      </ApiContextProvider>
     </NavigationContainer>
   );
 }
@@ -39,13 +42,13 @@ const Stack = createStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Root" component={TabOneScreen} />
-      <Stack.Screen name="DetailsScreen" component={TabTwoScreen} />
-      <Stack.Screen
+      <Stack.Screen name="Root" component={BottomTabNavigator} />
+      {/* <Stack.Screen name="SearchScreen" component={TabOneScreen} /> } */}
+      {/* <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}
         options={{ title: "Oops!" }}
-      />
+      /> */}
     </Stack.Navigator>
   );
 }

@@ -9,7 +9,7 @@ import { BottomTabParamList, RootStackParamList } from "../../types";
 import { DetailsFieldChild } from "../../components/DetailsField/styles";
 
 interface IProps {
-  navigation: StackNavigationProp<RootStackParamList, "DetailsScreen">;
+  navigation: StackNavigationProp<BottomTabParamList, "DetailsScreen">;
 }
 export const TabTwoScreen: FC<IProps> = ({ navigation }) => {
   return (
@@ -21,7 +21,7 @@ export const TabTwoScreen: FC<IProps> = ({ navigation }) => {
         color={colors.buttonBackground}
         title="Go back"
         onPress={() => {
-          navigation.navigate("Root");
+          navigation.navigate("SearchScreen");
         }}
       />
     </StyledContainer>
