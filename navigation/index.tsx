@@ -14,7 +14,9 @@ import { ColorSchemeName } from "react-native";
 import NotFoundScreen from "../screens/NotFoundScreen";
 import { TabOneScreen } from "../screens/search-screen/TabOneScreen";
 import { RootStackParamList } from "../types";
+import BottomTabNavigator from "./BottomTabNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
+import { ApiContextProvider } from "../context/api-context";
 
 export default function Navigation({
   colorScheme,
@@ -26,7 +28,9 @@ export default function Navigation({
       linking={LinkingConfiguration}
       theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
     >
-      <RootNavigator />
+      <ApiContextProvider>
+        <RootNavigator />
+      </ApiContextProvider>
     </NavigationContainer>
   );
 }
@@ -38,12 +42,13 @@ const Stack = createStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Root" component={TabOneScreen} />
-      <Stack.Screen
+      <Stack.Screen name="Root" component={BottomTabNavigator} />
+      {/* <Stack.Screen name="SearchScreen" component={TabOneScreen} /> } */}
+      {/* <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}
         options={{ title: "Oops!" }}
-      />
+      /> */}
     </Stack.Navigator>
   );
 }

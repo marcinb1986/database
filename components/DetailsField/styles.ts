@@ -16,7 +16,6 @@ export const StyledDetailsField = styled(View)`
 `;
 
 export const DetailsFieldChild = styled(Text)`
-  /* background-color: red; */
   margin: ${margins.margin};
   display: flex;
   flex-direction: column;

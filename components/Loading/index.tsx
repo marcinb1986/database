@@ -6,5 +6,9 @@ interface LoadingProps {
 }
 
 export const Loading: FC<LoadingProps> = ({ isLoading }) => {
-  return isLoading ? <Text>Loading...</Text> : null;
+  return (
+    <Text style={{ height: 30, alignSelf: "center", marginTop: 10 }}>
+      {isLoading ? "Loading..." : null}
+    </Text>
+  );
 };
