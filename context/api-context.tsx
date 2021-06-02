@@ -5,6 +5,8 @@ interface ApiContextValue {
   setUserName: (text: any) => void;
   userData: string[] | undefined;
   fetchApi: (userName: string) => void;
+  isLoading: boolean;
+  setIsLoading: (text: boolean) => void;
 }
 
 export const ApiContext = createContext<ApiContextValue>({
@@ -12,6 +14,8 @@ export const ApiContext = createContext<ApiContextValue>({
   setUserName: () => undefined,
   userData: [],
   fetchApi: () => undefined,
+  isLoading: false,
+  setIsLoading: () => undefined,
 });
 
 export const ApiContextProvider: FC<{ children: ReactNode }> = ({
@@ -37,8 +41,10 @@ export const ApiContextProvider: FC<{ children: ReactNode }> = ({
       userData,
       setUserName,
       fetchApi,
+      isLoading,
+      setIsLoading,
     }),
-    [userName]
+    [userName, userData, isLoading]
   );
   return <ApiContext.Provider value={value}>{children}</ApiContext.Provider>;
 };
